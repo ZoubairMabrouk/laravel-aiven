@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('scategories', function (Blueprint $table) {
             $table->id();
             $table->string('nomscategorie',100);
-            $table->string('imagescategorie',100);
+            $table->string('imagescategorie');
             $table->unsignedBigInteger('categorieID');
             $table->foreign('categorieID')
                 ->references('id')
