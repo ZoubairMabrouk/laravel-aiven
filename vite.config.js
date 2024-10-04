@@ -14,9 +14,6 @@ export default defineConfig({
         react(),
     ],
     esbuild:{
-        loader:{
-            '.js':'jsx',
-            '.jsx':'jsx',
-        },
+        loader:'jsx',
     },
 });
