@@ -16,6 +16,7 @@ export default defineConfig({
     esbuild:{
         loader:{
             '.js':'jsx',
+            '.jsx':'jsx',
         },
     },
 });
