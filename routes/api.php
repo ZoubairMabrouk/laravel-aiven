@@ -12,7 +12,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::middleware('api')->group(function () {
-    Route::resource('categories', CategorieController::class, 'categories');
+    Route::resource('categories', CategorieController::class,);
 });
 Route::middleware('api')->group(function () {
     Route::resource('scategories', ScategorieController::class);
