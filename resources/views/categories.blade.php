@@ -8,6 +8,6 @@
 <body>
     <div id="categories"></div>
 
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('js/app.jsx') }}"></script>
 </body>
 </html>
