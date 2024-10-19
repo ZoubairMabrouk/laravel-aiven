@@ -26,6 +26,10 @@ Route::get('/articles/art/pagination', [ArticleController::class,
 'showArticlesPagination']);
 Route::get('/articles/art/paginationPaginate', [ArticleController::class,
 'paginationPaginate']);
+Route::get('/sctaegories/scat/pagination', [ScategorieController::class,
+'showScategoriePagination']);
+Route::get('/articles/scat/paginationPaginate', [ScategorieController::class,
+'paginationPaginate']);
 
 /**Route::get('/categories', [CategorieController::class, 'index']);
 Route::post('/categories', [CategorieController::class, 'store']);
