@@ -61,4 +61,43 @@ class ScategorieController extends Controller
             return response()->json("Selection impossible {$e->getMessage()}");
             }
         }
+        public function showScategoriePagination(Request $request)
+        {
+            $filtre = $request->input('filtre', '');
+            $page = $request->input('page', 1);
+            $pageSize = $request->input('pageSize', 10);
+            $query = Scategorie::where('designation', 'like', '%' . $filtre . '%')
+                ->with('categories')
+                ->orderBy('id', 'desc');
+
+            $totalScategorie = $query->count();
+            $scategorie = $query->skip(($page - 1) * $pageSize)
+                ->take($pageSize)
+                ->get();
+
+            $totalPages = ceil($totalScategorie / $pageSize);
+
+            return response()->json([
+                'products' => $scategorie,
+                'totalPages' => $totalPages,
+            ]);
+        }
+        public function paginationPaginate()
+        {
+            $perPage = request()->input('pageSize', 2);
+
+            $filterDesignation = request()->input('filtre');
+
+            $query = Scategorie::with('categories');
+            if ($filterDesignation) {
+                $query->where('designation', 'like', '%' . $filterDesignation .
+                    '%');
+            }
+            $scategorie = $query->paginate($perPage);
+
+            return response()->json([
+                'products' => $scategorie->items(),
+                'totalPages' => $scategorie->lastPage(),
+            ]);
+        }
 }
