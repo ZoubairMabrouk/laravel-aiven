@@ -13,7 +13,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://laravel-aiven.vercel.app/",
+        "APP_URL": "https://vercel.com/zoubairmabrouks-projects/laravel-aiven",
         "APP_KEY": "base64:t7OrzrR1efDGi223d4dy86Od/NDzwL9Rw4gWjWnDDxU=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
