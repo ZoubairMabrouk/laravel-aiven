@@ -31,7 +31,7 @@ Route::get('/scategories/scat/pagination', [ScategorieController::class,
 Route::get('/scategories/scat/paginationPaginate', [ScategorieController::class,
 'paginationPaginate']);
 Route::get('/categories/cat/pagination', [CategorieController::class,
-'showScategoriePagination']);
+'showcategoriePagination']);
 Route::get('/categories/cat/paginationPaginate', [CategorieController::class,
 'paginationPaginate']);
 
