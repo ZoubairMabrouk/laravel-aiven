@@ -64,8 +64,8 @@ class ScategorieController extends Controller
         public function showScategoriePagination(Request $request)
         {
             $filtre = $request->input('filtre', '');
-            $page = $request->input('page', 1);
-            $pageSize = $request->input('pageSize', 10);
+            $page = (int) $request->input('page', 1);
+            $pageSize = (int) $request->input('pageSize', 10);
             $query = Scategorie::where('nomscategorie', 'like', '%' . $filtre . '%')
                 ->with('categories')
                 ->orderBy('id', 'desc');

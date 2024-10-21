@@ -38,8 +38,8 @@ class CategorieController extends Controller
     public function showcategoriePagination(Request $request)
     {
         $filtre = $request->input('filtre', '');
-        $page = $request->input('page', 1);
-        $pageSize = $request->input('pageSize', 10);
+        $page = (int) $request->input('page', 1);
+        $pageSize = (int) $request->input('pageSize', 10);
         $query = Categorie::where('nomcategorie', 'like', '%' . $filtre . '%')
             ->orderBy('id', 'desc');
 
@@ -63,8 +63,7 @@ class CategorieController extends Controller
 
         $query = Categorie::with('categories');
         if ($filterDesignation) {
-            $query->where('nomcategorie', 'like', '%' . $filterDesignation .
-                '%');
+            $query->where('nomcategorie', 'like', '%' . $filterDesignation . '%');
         }
         $categorie = $query->paginate($perPage);
 
