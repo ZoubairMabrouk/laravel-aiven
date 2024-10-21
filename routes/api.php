@@ -26,13 +26,13 @@ Route::get('/articles/art/pagination', [ArticleController::class,
 'showArticlesPagination']);
 Route::get('/articles/art/paginationPaginate', [ArticleController::class,
 'paginationPaginate']);
-Route::get('/sctaegories/scat/pagination', [ScategorieController::class,
+Route::get('/scategories/scat/pagination', [ScategorieController::class,
 'showScategoriePagination']);
-Route::get('/sctaegories/scat/paginationPaginate', [ScategorieController::class,
+Route::get('/scategories/scat/paginationPaginate', [ScategorieController::class,
 'paginationPaginate']);
-Route::get('/ctaegories/cat/pagination', [CategorieController::class,
+Route::get('/categories/cat/pagination', [CategorieController::class,
 'showScategoriePagination']);
-Route::get('/ctaegories/cat/paginationPaginate', [CategorieController::class,
+Route::get('/categories/cat/paginationPaginate', [CategorieController::class,
 'paginationPaginate']);
 
 /**Route::get('/categories', [CategorieController::class, 'index']);
