@@ -12,11 +12,11 @@ class Scategorie extends Model
         'nomscategorie','imagescategorie','categorieID'
     ];
 
-    public function categorie() {
+    public function categories() {
         return $this->belongsTo(Categorie::class,"categorieID");
     }
 
-    public function article()
+    public function articles()
     {
         return $this->hasMany(Article::class,"scategorieID");
     }
