@@ -41,6 +41,7 @@ class CategorieController extends Controller
         $page = (int) $request->input('page', 1);
         $pageSize = (int) $request->input('pageSize', 10);
         $query = Categorie::where('nomcategorie', 'like', '%' . $filtre . '%')
+            ->with('scategories')
             ->orderBy('id', 'desc');
 
         $totalcategorie = $query->count();
