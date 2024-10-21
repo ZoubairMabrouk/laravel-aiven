@@ -66,7 +66,7 @@ class ScategorieController extends Controller
             $filtre = $request->input('filtre', '');
             $page = $request->input('page', 1);
             $pageSize = $request->input('pageSize', 10);
-            $query = Scategorie::where('designation', 'like', '%' . $filtre . '%')
+            $query = Scategorie::where('nomscategorie', 'like', '%' . $filtre . '%')
                 ->with('categories')
                 ->orderBy('id', 'desc');
 
@@ -90,7 +90,7 @@ class ScategorieController extends Controller
 
             $query = Scategorie::with('categories');
             if ($filterDesignation) {
-                $query->where('designation', 'like', '%' . $filterDesignation .
+                $query->where('nomscategorie', 'like', '%' . $filterDesignation .
                     '%');
             }
             $scategorie = $query->paginate($perPage);
