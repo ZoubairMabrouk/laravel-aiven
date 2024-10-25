@@ -8,7 +8,7 @@ class ScategorieController extends Controller
 {
     public function index(){
         try {
-            $scategories=Scategorie::with('categorie')->get(); // Inclut la catégorie liée;
+            $scategories=Scategorie::with('categories')->get(); // Inclut la catégorie liée;
             return response()->json($scategories,200);
             } catch (\Exception $e) {
             return response()->json("Sélection impossible {$e->getMessage()}");
