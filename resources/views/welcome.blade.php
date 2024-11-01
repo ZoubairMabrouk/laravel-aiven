@@ -8,7 +8,7 @@
     <title>Laravel</title>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-
 requests">
-    <link href="{{ secure_asset('frontend/assets/index-CZpCW9iA.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('frontend/assets/index-BW2-xbAO.css') }}" rel="stylesheet">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
