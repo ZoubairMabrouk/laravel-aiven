@@ -9,6 +9,13 @@
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
+
+    ],
+    "build":[
+        {
+            "src":"/(.*)",
+            "use":"@vercel/node"
+        }
     ],
     "env": {
         "APP_ENV": "production",
