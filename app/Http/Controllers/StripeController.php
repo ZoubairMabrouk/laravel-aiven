@@ -8,7 +8,7 @@ class StripeController extends Controller
 {
     public function processpayment(Request $request)
     {
-        Stripe::setApiKey('pk_test_51QGHbXAr6uUDgl43kfsSNH6vNilg84TkMnJrsCJuHAf0C0qcK8siHBMQ9XZ0LKCxdOFZMBX5rwK0QryjjxgiikPa00AktwsgzP');
+        Stripe::setApiKey('sk_test_51QGHbXAr6uUDgl43agmclY2f0R4ngyI2WKwsxVUJxHqvZ1f9LMCME8PlRyFXUs5revKxF69bvVHMX9Hozo7SVIuC00TMa3sH0k');
         try {
             $charge = Charge::create([
                 'amount' => $request->amount,
