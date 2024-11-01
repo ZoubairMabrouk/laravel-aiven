@@ -11,12 +11,7 @@
         }
 
     ],
-    "builds":[
-        {
-            "src":"/(.*)",
-            "use":"@vercel/node"
-        }
-    ],
+
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
